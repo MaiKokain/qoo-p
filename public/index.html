@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://unpkg.com/htmx.org@1.9.8"></script>
+    <link rel="stylesheet" href="./index.css" />
+    <title>HAHA</title>
+  </head>
+  <body>
+    <div class="text-center text-4xl font-bold my-5">QooPee</div>
+    <p class="text-center my-8">
+      Get APK direct download from QooApp without installing QooApp
+    </p>
+    <div class="flex justify-center gap-4 max-md:flex-col h-full">
+      <input
+        type="text"
+        id="qoop"
+        class="input input-bordered max-md:mx-4 max-lg:w-[60vw] xl:w-[30vw] max-sm:w-auto"
+        name="qoop"
+        placeholder="https://apps.qoo-app.com/en/app/6200"
+      />
+      <button
+        class="btn lg:w-22 max-md:w-auto rounded-lg max-md:mx-4"
+        hx-get="/get"
+        hx-indicator=".shiggy"
+        hx-swap="innerHTML"
+        hx-target=".lol"
+        hx-on::before-request="try { document.querySelector('.shit').remove() } catch {}"
+        hx-include="[name='qoop']"
+      >
+        GET
+      </button>
+    </div>
+
+    <div class="flex justify-center my-9 mr-[4.9rem] ballin">
+      <!-- HIDDEN SHIGGY -->
+      <img src="/shiggy" alt="" class="w-[6em] h-[6em] shiggy" />
+      <div class="lol"></div>
+    </div>
+  </body>
+  <style>
+    .shiggy {
+      display: none;
+    }
+    .htmx-request .shiggy {
+      display: inline;
+    }
+    .htmx-request.shiggy {
+      display: inline;
+    }
+  </style>
+</html>
