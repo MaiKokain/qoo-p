@@ -20,7 +20,7 @@ app.get('/get', async(req) => {
     }
 
     const data = await qoo.generateAppData(req.query.qoop)
-    if (!data.direct_download) return new CardBody().render({ children: ErrorComp({ text: "Did not return a successfull direct download url, are you sure its not a game that require pre-registeration." }) })
+    if (!data.direct_download) return new CardBody().render({ children: ErrorComp({ text: "Did not return a successfull direct download url, are you sure its not a game that require pre-registeration?" }) })
     return new CardBody().render({
         children: DownloadButton({ url: data.direct_download })
     })
