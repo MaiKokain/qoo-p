@@ -2,10 +2,12 @@
 
 #### Just input the game link and it will response with the direct download link for the apk.
 
+#### Note: This site is not so responsive on mobile yet, but it is usable.
 
 ### Preview
 
 <img src="pictures/preview.png">
+
 
 ### Setup
 
