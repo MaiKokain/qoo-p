@@ -9,11 +9,6 @@ const app = new Elysia();
 const qoo = new QooApi();
 
 app.get('/', () => Bun.file("public/index.html"))
-app.get('/time', () => {
-    return (
-        <div>{Date.now()}</div>
-    )
-})
 app.get('/shiggy', () => Bun.file("public/shiggy.gif"))
 app.get('/index.css', () => Bun.file("public/index.css"))
 app.get('/get', async(req) => {
